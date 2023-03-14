@@ -2,63 +2,63 @@
 import java.text.*;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.ArrayList;
 import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        List<String> listofFormats = List.of(
-            "MMM dd HH:mm:ss",
-            "yyyy-MM-dd'T'HH:mm:ss*SSSZZZZ",
-            "yyyy MMM dd HH:mm:ss.SSS zzz",
-            "MMM dd HH:mm:ss ZZZZ yyyy",
-            "dd/MMM/yyyy:HH:mm:ss ZZZZ",
-            "MMM dd, yyyy hh:mm:ss a",
-            "MMM dd yyyy HH:mm:ss",
-            "MMM dd HH:mm:ss yyyy",
-            "MMM dd HH:mm:ss ZZZZ",
-            "yyyy-MM-dd'T'HH:mm:ssZZZZ",
-            "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-            "yyyy-MM-dd HH:mm:ss ZZZZ",
-            "yyyy-MM-dd HH:mm:ssZZZZ",
-            "yyyy-MM-dd HH:mm:ss,SSS",
-            "yyyy/MM/dd*HH:mm:ss",
-            "yyyy MMM dd HH:mm:ss.SSS*zzz",
-            "yyyy MMM dd HH:mm:ss.SSS",
-            "yyyy-MM-dd HH:mm:ss,SSSZZZZ",
-            "yyyy-MM-dd HH:mm:ss.SSS",
-            "yyyy-MM-dd HH:mm:ss.SSSZZZZ",
-            "yyyy-MM-dd'T'HH:mm:ss.SSS",
-            "yyyy-MM-dd'T'HH:mm:ss",
-            "yyyy-MM-dd'T'HH:mm:ss'Z'",
-            "yyyy-MM-dd'T'HH:mm:ss.SSS",
-            "yyyy-MM-dd'T'HH:mm:ss",
-            "yyyy-MM-dd*HH:mm:ss:SSS",
-            "yyyy-MM-dd*HH:mm:ss",
-            "yy-MM-dd HH:mm:ss,SSS ZZZZ",
-            "yy-MM-dd HH:mm:ss,SSS",
-            "yy-MM-dd HH:mm:ss",
-            "yy/MM/dd HH:mm:ss",
-            "yyMMdd HH:mm:ss",
-            "yyyyMMdd HH:mm:ss.SSS",
-            "MM/dd/yy*HH:mm:ss",
-            "MM/dd/yyyy*HH:mm:ss",
-            "MM/dd/yyyy*HH:mm:ss*SSS",
-            "MM/dd/yy HH:mm:ss ZZZZ",
-            "MM/dd/yyyy HH:mm:ss ZZZZ",
-            "HH:mm:ss",
-            "HH:mm:ss.SSS",
-            "HH:mm:ss,SSS",
-            "dd/MMM HH:mm:ss,SSS",
-            "dd/MMM/yyyy:HH:mm:ss",
-            "dd/MMM/yyyy HH:mm:ss",
-            "dd-MMM-yyyy HH:mm:ss",
-            "dd-MMM-yyyy HH:mm:ss.SSS",
-            "dd MMM yyyy HH:mm:ss",
-            "dd MMM yyyy HH:mm:ss*SSS",
-            "MMdd_HH:mm:ss",
-            "MMdd_HH:mm:ss.SSS",
-            "MM/dd/yyyy hh:mm:ss a:SSS",
-            "MM/dd/yyyy hh:mm:ss a"
-        ); 
+        ArrayList<String> listofFormats = new ArrayList<String>();
+            listofFormats.add("yyyy-MM-dd'T'HH:mm:ss*SSSZZZZ");
+listofFormats.add("yyyy MMM dd HH:mm:ss.SSS zzz");
+listofFormats.add("MMM dd HH:mm:ss ZZZZ yyyy");
+listofFormats.add("dd/MMM/yyyy:HH:mm:ss ZZZZ");
+listofFormats.add("MMM dd; yyyy hh:mm:ss a");
+listofFormats.add("MMM dd yyyy HH:mm:ss");
+listofFormats.add("MMM dd HH:mm:ss yyyy");
+listofFormats.add("MMM dd HH:mm:ss ZZZZ");
+listofFormats.add("MMM dd HH:mm:ss");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ssZZZZ");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+listofFormats.add("yyyy-MM-dd HH:mm:ss ZZZZ");
+listofFormats.add("yyyy-MM-dd HH:mm:ssZZZZ");
+listofFormats.add("yyyy-MM-dd HH:mm:ss;SSS");
+listofFormats.add("yyyy/MM/dd*HH:mm:ss");
+listofFormats.add("yyyy MMM dd HH:mm:ss.SSS*zzz");
+listofFormats.add("yyyy MMM dd HH:mm:ss.SSS");
+listofFormats.add("yyyy-MM-dd HH:mm:ss;SSSZZZZ");
+listofFormats.add("yyyy-MM-dd HH:mm:ss.SSS");
+listofFormats.add("yyyy-MM-dd HH:mm:ss.SSSZZZZ");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss.SSS");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss'Z'");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss.SSS");
+listofFormats.add("yyyy-MM-dd'T'HH:mm:ss");
+listofFormats.add("yyyy-MM-dd*HH:mm:ss:SSS");
+listofFormats.add("yyyy-MM-dd*HH:mm:ss");
+listofFormats.add("yy-MM-dd HH:mm:ss;SSS ZZZZ");
+listofFormats.add("yy-MM-dd HH:mm:ss;SSS");
+listofFormats.add("yy-MM-dd HH:mm:ss");
+listofFormats.add("yy/MM/dd HH:mm:ss");
+listofFormats.add("yyMMdd HH:mm:ss");
+listofFormats.add("yyyyMMdd HH:mm:ss.SSS");
+listofFormats.add("MM/dd/yy*HH:mm:ss");
+listofFormats.add("MM/dd/yyyy*HH:mm:ss");
+listofFormats.add("MM/dd/yyyy*HH:mm:ss*SSS");
+listofFormats.add("MM/dd/yy HH:mm:ss ZZZZ");
+listofFormats.add("MM/dd/yyyy HH:mm:ss ZZZZ");
+listofFormats.add("HH:mm:ss");
+listofFormats.add("HH:mm:ss.SSS");
+listofFormats.add("HH:mm:ss;SSS");
+listofFormats.add("dd/MMM HH:mm:ss;SSS");
+listofFormats.add("dd/MMM/yyyy:HH:mm:ss");
+listofFormats.add("dd/MMM/yyyy HH:mm:ss");
+listofFormats.add("dd-MMM-yyyy HH:mm:ss");
+listofFormats.add("dd-MMM-yyyy HH:mm:ss.SSS");
+listofFormats.add("dd MMM yyyy HH:mm:ss");
+listofFormats.add("dd MMM yyyy HH:mm:ss*SSS");
+listofFormats.add("MMdd_HH:mm:ss");
+listofFormats.add("MMdd_HH:mm:ss.SSS");
+listofFormats.add("MM/dd/yyyy hh:mm:ss a:SSS");
+listofFormats.add("MM/dd/yyyy hh:mm:ss a");
         Date date = null;
 
         SimpleDateFormat expectedFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
